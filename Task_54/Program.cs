@@ -4,7 +4,7 @@
 Console.Clear();
 
 int m = Input("Введите количество строк: ");
-int n = Input("Введите количество строк: ");
+int n = Input("Введите количество столбцов: ");
 
 int[,] numbers = new int [m,n];
 
