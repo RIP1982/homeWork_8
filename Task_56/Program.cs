@@ -44,9 +44,6 @@ for(int i = 0; i < numbers.GetLength(0); i++)
 }
 Console.WriteLine();
 Console.WriteLine($"Наименьшая сумма элементов = {temp} в строке {k}");
-
-       
-
 int Input(string output)
 {
    Console.Write(output);
