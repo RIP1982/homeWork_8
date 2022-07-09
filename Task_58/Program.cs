@@ -10,21 +10,9 @@ int l = Input("Введите количество столбцов второг
 int[,] firstArray = new int[m, n];
 int[,] secondArray = new int[n, l];
 
-for (int i = 0; i < firstArray.GetLength(0); i++)
-{
-    for (int j = 0; j < firstArray.GetLength(1); j++)
-    {
-        firstArray[i, j] = new Random().Next(1, 10);
-    }
-}
+FillArray(firstArray);
+FillArray(secondArray);
 
-for (int i = 0; i < secondArray.GetLength(0); i++)
-{
-    for (int j = 0; j < secondArray.GetLength(1); j++)
-    {
-        secondArray[i, j] = new Random().Next(1, 10);
-    }
-}
 int[,] thirdArray = new int[m, l];
 
 for (int i = 0; i < firstArray.GetLength(0); i++)
@@ -49,6 +37,17 @@ int Input(string output)
 {
     Console.Write(output);
     return Convert.ToInt32(Console.ReadLine());
+}
+
+void FillArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        }
+    }
 }
 
 void PrintArray(int[,] array)
